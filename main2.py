@@ -5,7 +5,7 @@ def getRandomDate(startDate,endDate): #defining function
     randomGenerator=random.random()
     dateFormat='%m/%d/%y'
     startTime=time.mktime(time.strptime(endDate,dateFormat))
-    randomTime=startTime+randomGenerator * (endTime-startTime)
+    randomTime=startTime+randomGenerator * (endDate-startTime)
     randomDate=time.strftime(dateFormat,time.localTime(randomTime))
     return randomDate
 #display result
